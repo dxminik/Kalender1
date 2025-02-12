@@ -1,3 +1,3 @@
-from backend.database.manage_event import create_event, update_event
+from backend.database.manage_users import create_user
 
-create_event("1", "2", "fesfdse", "fswf", "fewrfse", "Schwäbisch Gmünd", "Bowlingfreg")
+create_user("Aubergine", "Beutel", "Weiblich", "23.01.1999", "Tiere, Musik, Pflanzen")

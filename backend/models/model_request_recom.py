@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 
-client = OpenAI(api_key='')
+client = OpenAI(api_key='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')
 
 
 def gib_empfehlung(daten):

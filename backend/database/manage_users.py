@@ -17,10 +17,10 @@ def create_user(user_name, user_surname, user_sex, user_birthday, user_interests
 def get_user_by_id(user_id):
     connection = sqlite3.connect(DB_PATH)
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM events WHERE id = ?", (user_id,))
-    event = cursor.fetchone()
+    cursor.execute("SELECT * FROM user WHERE user_id = ?", (user_id,))
+    user = cursor.fetchone()
     connection.close()
-    return event
+    return user
 
 def update_user(user_id, user_name=None, user_surname=None, user_sex=None, user_birthday=None, user_interests=None):
     connection = sqlite3.connect(DB_PATH)
@@ -56,7 +56,7 @@ def update_user(user_id, user_name=None, user_surname=None, user_sex=None, user_
 def delete_user(user_id):
     connection = sqlite3.connect(DB_PATH)
     cursor = connection.cursor()
-    cursor.execute("DELETE FROM user WHERE id = ?", (user_id,))
+    cursor.execute("DELETE FROM user WHERE user_id = ?", (user_id,))
     connection.commit()
     connection.close()
 

@@ -9,8 +9,8 @@ c = conn.cursor()
 #          "user_surname TEXT NOT NULL,"
 #          "user_sex TEXT NOT NULL, "
 #          "user_birthday TEXT NOT NULL)")
-c.execute('''
+c.execute("""
     ALTER TABLE user ADD COLUMN user_interests TEXT
-''')
+""")
 conn.commit()
 conn.close()

@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='')
 
 def gib_empfehlung(daten):
     prompt = f"Basierend auf den folgenden Nutzerdaten, gib eine Empfehlung für den Benutzer: {daten}"

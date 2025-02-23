@@ -22,7 +22,7 @@ fetch('http://127.0.0.1:5000/getEvents', {
             const div = document.createElement('div');
             div.classList.add('anzeigeEintrag');
             div.innerHTML = `
-            <h2 class="anzeigeEintragName">${name}</h2> 
+            <h2 class="anzeigeEintragName">Name ${name}</h2> 
             <p class="anzeigEintragTyp">${type}</p>
             <p class="anzeigeEintragLocation">${location}</p>
             <p class="anzeigeEintragFeeling">${feeling}</p>

@@ -104,6 +104,7 @@ body {
 
 .mainContentContainer {
     display: flex;
+    padding: 2rem 5rem;
     flex-direction: column;
     gap: 3rem;
     justify-content: center;
@@ -120,10 +121,7 @@ body {
 
 .feelingTitle {
     font-size: 1.4rem;
-}
-
-.feelingInput {
-
+    text-align: center;
 }
 
 .feelingOutput {
@@ -140,8 +138,49 @@ body {
 }
 
 .descriptionTitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 550;
     text-align: center;
+}
+
+.descriptionInput {
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 18rem;
+    height: 5rem;
+    padding: 1rem;
+    resize: none;
+    outline: none;
+}
+
+.descriptionInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.descriptionInput::placeholder {
+    padding: 0.1rem;
+}
+
+/* Submit */
+.submitButton {
+    width: fit-content;
+    background-color: #1f1f1f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid gray;
+    color: white;
+    margin: 0 auto;
+    padding: 0.9rem;
+    border-radius: 0.65rem;
+}
+
+.submitButton:hover {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
 }
 
 

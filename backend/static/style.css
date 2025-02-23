@@ -274,5 +274,36 @@ body {
     transition: border-color 0.5s ease-in-out;
 }
 
+/* Eintraege */
+.anzeigeContainer {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    border-radius: 0.7rem;
+    padding: 2.5rem 5rem;
+    width: fit-content;
+    margin-top: 2rem;
+}
+
+.anzeigeTitle {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.anzeigeEintrag{
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    padding: 1rem 4rem;
+}
+
+.anzeigeEintragName {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 
 

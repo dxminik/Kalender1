@@ -72,6 +72,11 @@ submitButton.addEventListener('click', async (e) => {
     }).then((response => {
         response.json().then((data) => {
             console.log(data)
+            if (data.status === 200) {
+                alert('Eintrag erfolgreich !')
+            } else {
+                alert('Eintrag fehlgeschlagen !')
+            }
         })
     }))
 })

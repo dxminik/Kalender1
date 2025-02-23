@@ -18,6 +18,7 @@ fetch('http://127.0.0.1:5000/getEvents', {
             let location = row[6]
             let description = row[7]
             let feeling = row[8]
+            let empfehlung = row[9]
             const div = document.createElement('div');
             div.classList.add('anzeigeEintrag');
             div.innerHTML = `
@@ -28,6 +29,7 @@ fetch('http://127.0.0.1:5000/getEvents', {
             <p class="anzeigeEintragDescription">${description}</p>
             <p class="anzeigeEintragDate">${date}</p>
             <p class="anzeigeEintragTime">${time}</p>
+            <p>${empfehlung}</p>
             `;
             anzeige.appendChild(div);
         })

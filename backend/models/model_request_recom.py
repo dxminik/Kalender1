@@ -1,11 +1,7 @@
-# Description: This file contains the function to request a recommendation from the OpenAI API.
-# The function takes the user data as input and returns a recommendation based on the user data.
-# The recommendation is generated using the GPT-3.5-turbo model from OpenAI.
-# The function is called in the submit route of the Flask application to generate a recommendation for the user.
 from openai import OpenAI
 
 
-
+client = OpenAI(api_key='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')
 
 def gib_empfehlung(daten):
     prompt = f"Basierend auf den folgenden Nutzerdaten, gib eine Empfehlung für den Benutzer: {daten}"

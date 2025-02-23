@@ -54,9 +54,10 @@ descriptionInput.addEventListener('input', (e) => {
 
 //SubmitButton
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', (e) => {
+submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
-    fetch('http://127.0.0.1:5000/submit', {
+    console.log(nameValue, feelingValue, typeValue, locationValue, descriptionValue)
+    const response = await fetch('http://127.0.0.1:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -68,7 +69,11 @@ submitButton.addEventListener('click', (e) => {
             location: locationValue,
             description: descriptionValue
         })
-    })
+    }).then((response => {
+        response.json().then((data) => {
+            console.log(data)
+        })
+    }))
 })
 
 

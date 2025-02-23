@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from datetime import datetime
+from datetime import datetime, date
 
 import database.manage_event as me
 app = Flask(__name__)
@@ -18,8 +18,8 @@ def submit():
     feelingInput = data.get('feeling')
     locationInput = data.get('location')
     descriptionInput = data.get('description')
-    dateInput = datetime.now().date()
-    timeInput = datetime.now().time()
+    dateInput = date.today().strftime("%d-%m-%Y")
+    timeInput = datetime.now().time().strftime("%H:%M:%S")
     
 
     me.create_event(1, nameInput, typeSelect, dateInput, timeInput, locationInput, descriptionInput, feelingInput)

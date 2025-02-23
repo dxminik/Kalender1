@@ -54,5 +54,21 @@ descriptionInput.addEventListener('input', (e) => {
 
 //SubmitButton
 const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    fetch('/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: nameValue,
+            feeling: feelingValue,
+            type: typeValue,
+            location: locationValue,
+            description: descriptionValue
+        })
+    })
+})
 
 

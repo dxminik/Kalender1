@@ -5,22 +5,8 @@ darkModeButton.addEventListener('click', (e) => {
     console.log('Dark Mode Button Clicked');
 })
 
-//NameInput
-const nameInput = document.getElementById('nameInput');
-let nameValue = nameInput.value;
-
-nameInput.addEventListener('input', (e) => {
-    nameValue = e.target.value;
-})
-
-//TypeInput
-const typeSelect = document.getElementById('typeSelect');
-let typeValue = typeInput.value;
-
-typeSelect.addEventListener('change', (e) => {
-    typeValue = e.target.value;
-})
-
+//Formular
+const form = document.getElementById('mainContentContainer');
 
 //FeelingInput
 const feelingInput = document.getElementById('feelingInput');
@@ -31,6 +17,24 @@ feelingInput.addEventListener('input', (e) => {
     feelingValue = e.target.value;
     feelingOutput.innerHTML = "Ich fühle mich " + feelingValue + "/10"; 
 });
+
+//NameInput
+const nameInput = document.getElementById('nameInput');
+let nameValue;
+
+nameInput.addEventListener('input', (e) => {
+    nameValue = e.target.value;
+})
+
+//TypeSelect
+const typeSelect = document.getElementById('typeSelect');
+let typeValue = typeSelect.value;
+
+typeSelect.addEventListener('change', (e) => {
+    typeValue = e.target.value;
+})
+
+
 
 //LocationInput
 const locationInput = document.getElementById('locationInput');
@@ -51,18 +55,4 @@ descriptionInput.addEventListener('input', (e) => {
 //SubmitButton
 const submitButton = document.getElementById('submitButton');
 
-submitButton.addEventListener('click', (e) => {
-    fetch('127.0.0.1:5000/submit', {
-        method: "POST",
-        body: JSON.stringify({
-            name: nameValue,
-            type: typeValue,
-            feeling: feelingValue,
-            location: locationValue,
-            description: descriptionValue
-        })
-    })
-    e.preventDefault();
-    
-})
 

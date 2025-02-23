@@ -26,17 +26,39 @@
     </header>
 
     <div class="mainContainer">
-        <div class="mainTitle">Title</div>
-        <form class="mainContentContainer" action="/submit" method="post">
+        <div class="mainTitle">Eintrag erstellen</div>
+        <form class="mainContentContainer" method="post">
+            <div class="nameContainer">
+                <span class="nameTitle">Wie soll der Eintrag heißen?</span>
+                <input class="nameInput" type="text" placeholder="Name der Eintrags" autocomplete="off" required>
+            </div>
+
+            <div class="typeContainer">
+                <span class="typeTitle">Um welches Ereignis handelt es sich?</span>
+                <select name="typeSelect" id="typeSelect" class="typeSelect">
+                    <option class="typeOption" value="arbeit">Arbeit</option>
+                    <option class="typeOption" value="freizeit">Freizeit</option>
+                    <option class="typeOption" value="sport">Sport</option>
+                    <option class="typeOption" value="schule">Schule</option>
+                    <option class="typeOption" value="sonstiges">Sonstiges</option>
+                </select>
+            </div>
+            
+
             <div class="feelingContainer">
                 <span class="feelingTitle">Wie geht es dir heute ?</span>
                 <input class="feelingInput" type="range" name="feelingInput" id="feelingInput" max="10" min="1" value="1" required>
                 <span class="feelingOutput" id="feelingOutput">Ich fühle mich 1/10.</span>
             </div>
+
+            <div class="locationContainer">
+                <span class="locationTitle">Wo befindest du dich gerade?</span>
+                <input class="locationInput" id="locationInput" name="locationInput" placeholder="Momentaner Standort" type="text" autocomplete="off" required>
+            </div>
             
             <div class="descriptionContainer">
                <span class="descriptionTitle">Beschreibung:</span>
-               <textarea class="descriptionInput" name="descriptionInput" id="descriptionInput" placeholder="Was hast du heute gemacht?"></textarea> 
+               <textarea class="descriptionInput" name="descriptionInput" id="descriptionInput" placeholder="Was hast du heute gemacht?" autocomplete="off" required></textarea> 
             </div>
 
             <button type="submit" class="submitButton">Eintrag erstellen</button>

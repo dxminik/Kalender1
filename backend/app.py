@@ -1,4 +1,6 @@
 from flask import Flask, request, render_template
+from datetime import datetime
+
 import database.manage_event as me
 app = Flask(__name__)
 
@@ -16,10 +18,13 @@ def submit():
     feelingInput = data.get('feeling')
     locationInput = data.get('location')
     descriptionInput = data.get('description')
-
-    me.create_event(1, nameInput, typeSelect, 2, 2, locationInput, descriptionInput, feelingInput)
+    dateInput = datetime.now().date()
+    timeInput = datetime.now().time()
     
-    return {'name': nameInput, 'type': typeSelect, 'feeling': feelingInput, 'location': locationInput, 'description': descriptionInput}
+
+    me.create_event(1, nameInput, typeSelect, dateInput, timeInput, locationInput, descriptionInput, feelingInput)
+    
+    return {'name': nameInput, 'type': typeSelect, "date": dateInput, "time": timeInput, 'feeling': feelingInput, 'location': locationInput, 'description': descriptionInput}
 
 if __name__ == '__main__':
     app.run(debug=True)  # Debug-Modus aktivieren

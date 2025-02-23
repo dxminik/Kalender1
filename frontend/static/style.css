@@ -89,44 +89,136 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
-    margin: 6rem auto;
+    margin: 2.5rem auto;
     width: fit-content;
-    gap: 1rem;
     background-color: #1f1f1f;
     padding: 2.5rem;
     border-radius: 0.7rem;
 }
 
 .mainTitle {
+    margin-top: 1.5rem;
     font-size: 2.5rem;
     text-align: center;
 }
 
 .mainContentContainer {
     display: flex;
-    padding: 2rem 5rem;
+    padding: 1rem 4rem;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
     justify-content: center;
 }
+
+/* Name */
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.nameTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nameInput {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nameInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Type */
+.typeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.typeTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.typeSelect {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.typeSelect:active {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Feeling */
 
 .feelingContainer {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    border: 2px solid gray;
     padding: 1rem;
-    border-radius: 0.7rem;
 }
 
 .feelingTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
 .feelingOutput {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    padding: 0.6rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Location */
+.locationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.locationTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.locationInput {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.locationInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
 }
 
 /* Description */
@@ -138,8 +230,7 @@ body {
 }
 
 .descriptionTitle {
-    font-size: 1.4rem;
-    font-weight: 550;
+    font-size: 1.2rem;
     text-align: center;
 }
 

@@ -9,6 +9,7 @@ fetch('http://127.0.0.1:5000/getEvents', {
     }
 }).then((response) => {
     response.json().then((data) => {
+        data.reverse();
         data.forEach((row) => {
             //Div mit Daten erstellen
             let id = row[0]
@@ -30,25 +31,11 @@ fetch('http://127.0.0.1:5000/getEvents', {
             <p class="anzeigeDescription">Beschreibung: ${description}</p>
             <p class="anzeigeEmpfehlung">Empfehlung: ${empfehlung}</p>
             <p class="anzeigeDate">Erstellt am: ${date} ${time}</p> 
-            <button class="anzeigeDelete" value="${id}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+            <button class="anzeigeDelete" value="${id}" id="button${id}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
             `;
             anzeige.appendChild(div);
         })
     })
-})
+})  
 
-const deleteButtons = document.getElementsByClassName('anzeigeDelete');
-deleteButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const id = e.target.value;
-        fetch('http://127.0.0.1:5000/deleteEvent', {
-            method: 'POST',
-            header: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: id
-            })
-        })
-    })
-});
+

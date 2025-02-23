@@ -3,7 +3,7 @@ from datetime import date, datetime
 import database.manage_users as mu
 import database.manage_event as me
 import models.model_request_recom  as mr
-
+import app
 
 def main_loop():
     print("Hallo, mit wem spreche ich?")

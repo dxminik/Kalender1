@@ -23,7 +23,7 @@ def submit():
     timeInput = datetime.now().time().strftime("%H:%M:%S")
     
     # Empfehlung generieren
-    empfehlung = gib_empfehlung(data)vg
+    empfehlung = gib_empfehlung(data)
 
     me.create_event(1, nameInput, typeSelect, dateInput, timeInput, locationInput, descriptionInput, feelingInput, empfehlung)
     

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <title>Projekt</title>
 </head>
     
@@ -31,10 +31,10 @@
 
     <div class="mainContainer" method="post">
         <div class="mainTitle">Title</div>
-        <form class="mainContentContainer">
+        <form class="mainContentContainer" action="/submit" method="post">
             <div class="feelingContainer">
                 <span>Wie geht es dir heute ?</span>
-                <input type="range" name="" id="" max="10">
+                <input type="range" name="user_input" max="10">
             </div>
             
         </form>

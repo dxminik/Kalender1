@@ -1,0 +1,113 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.headerContainer {
+    display: flex;
+    background-color: #1f1f1f;
+    color: white;
+    height: fit-content;
+}
+
+.headerTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.7rem;
+    align-content: center;
+}
+
+/* Nav */
+
+.headerNavLeftContainer {
+    display: flex;
+    margin: 0 auto;
+    gap: 3.5rem;
+}
+
+.headerNavRightContainer {
+    display: flex;
+    margin-right: 2.5rem;
+    padding: 0.5rem;
+    gap: 0.2rem
+}
+
+.headerNavItem {
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+    font-weight: 540;
+    font-size: 1.2rem;
+    color: white;
+    align-content: center;
+}
+
+.headerNavItem:hover {
+    border-bottom: 3px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+
+.headerButton {
+    margin-top: 0.3rem;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.headerButton:hover svg{
+    fill: aqua;
+    transition: fill 0.5s ease-in-out;
+}   
+
+.headerContainer svg {
+    fill: white;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.headerSearch {
+    margin-left: 1rem;
+    outline: none;
+    border-radius: 0.4rem;
+    border: 2px solid gray;
+    background-color: inherit;
+    color: white;
+    padding: 0.7rem;
+    font-size: 1rem;
+}
+
+.headerSearch:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Main */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 6rem auto;
+    width: fit-content;
+    gap: 1rem;
+    background-color: #1f1f1f;
+    padding: 2.5rem;
+    border-radius: 0.7rem;
+}
+
+.mainTitle {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.mainContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+

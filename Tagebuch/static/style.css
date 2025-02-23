@@ -277,33 +277,84 @@ body {
 /* Eintraege */
 .anzeigeContainer {
     display: flex;
-    color: white;
     flex-direction: column;
-    gap: 1.5rem;
-    margin: 0 auto;
-    padding: 1rem;
+    color: white;
+    margin: 3rem auto;
+    padding: 2rem;
     background-color: #1f1f1f;
+}
+
+.anzeigeContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    max-width: 80rem;
+}
+
+.anzeigeEintrag {
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    border: 2px solid gray;
     border-radius: 0.7rem;
-    padding: 2.5rem 5rem;
-    width: fit-content;
-    margin-top: 2rem;
+    padding: 1rem 1em;
+}
+
+.anzeigeName {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.anzeigeTyp {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.anzeigeDescription {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.anzeigeEmpfehlung {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .anzeigeTitle {
+    font-size: 2rem;
     text-align: center;
-    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 550;
 }
 
-.anzeigeEintrag{
-    border: 2px solid gray;
-    border-radius: 0.7rem;
-    padding: 1rem 4rem;
-}
-
-.anzeigeEintragName {
-    font-size: 1.4rem;
+.anzeigeLocation {
     text-align: center;
+    font-size: 1.1rem;
 }
 
+.anzeigeFeeling {
+    text-align: center;
+    font-size: 1.1rem;
+}
 
+.anzeigeDate {
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 0;
+}
 
+.anzeigeDelete {
+    width: fit-content;
+    margin-top: auto;
+    background-color: #1f1f1f;
+    border: none;
+    cursor: pointer;
+}
+
+.anzeigeDelete svg {
+    fill: red;
+}

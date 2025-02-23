@@ -109,5 +109,40 @@ body {
     justify-content: center;
 }
 
+.feelingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    border: 2px solid gray;
+    padding: 1rem;
+    border-radius: 0.7rem;
+}
+
+.feelingTitle {
+    font-size: 1.4rem;
+}
+
+.feelingInput {
+
+}
+
+.feelingOutput {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Description */
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 0.7rem;
+}
+
+.descriptionTitle {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 
 

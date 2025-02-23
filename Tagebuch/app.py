@@ -38,6 +38,13 @@ def getEvents():
     return me.get_all_events()
 
 
+@app.route('/deleteEvent', methods=['POST'])
+def deleteEvent():
+    data = request.json
+    id = data.get('id')
+    me.delete_event(id)
+    return {"status": 200}
+
 
 if __name__ == '__main__':
     app.run(debug=True)  # Debug-Modus aktivieren

@@ -1,8 +1,5 @@
 from openai import OpenAI
 
-
-client = OpenAI(api_key='')
-
 def gib_empfehlung(daten):
     prompt = f"Basierend auf den folgenden Nutzerdaten, gib eine Empfehlung für den Benutzer: {daten}"
 

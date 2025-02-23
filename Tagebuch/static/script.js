@@ -1,10 +1,3 @@
-//Dark-Lightmode
-const darkModeButton = document.getElementById('darkModeButton');
-
-darkModeButton.addEventListener('click', (e) => {
-    console.log('Dark Mode Button Clicked');
-})
-
 //Formular
 const form = document.getElementById('mainContentContainer');
 

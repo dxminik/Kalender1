@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from datetime import datetime, date
+from models.model_request_recom import gib_empfehlung
 
 import database.manage_event as me
 app = Flask(__name__)
@@ -21,8 +22,10 @@ def submit():
     dateInput = date.today().strftime("%d-%m-%Y")
     timeInput = datetime.now().time().strftime("%H:%M:%S")
     
+    # Empfehlung generieren
+    empfehlung = gib_empfehlung(data)
 
-    me.create_event(1, nameInput, typeSelect, dateInput, timeInput, locationInput, descriptionInput, feelingInput)
+    me.create_event(1, nameInput, typeSelect, dateInput, timeInput, locationInput, descriptionInput, feelingInput, empfehlung)
     
     return {'name': nameInput, 'type': typeSelect, "date": dateInput, "time": timeInput, 'feeling': feelingInput, 'location': locationInput, 'description': descriptionInput}
 

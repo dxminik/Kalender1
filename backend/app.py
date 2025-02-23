@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-
+import database.manage_event as me
 app = Flask(__name__)
 
 # Startseite mit Formular
@@ -10,15 +10,16 @@ def index():
 # Route zum Verarbeiten der Formulareingabe
 @app.route('/submit', methods=['POST'])
 def submit():
-    nameInput = request.form.get('nameInput')  # Eingabe aus dem Formular abrufen
-    typeSelect = request.form.get('typeSelect')
-    feelingInput = request.form.get('feellingInput')
-    locationInput = request.form.get('locationInput')
-    descriptionInput = request.form.get('descriptionInput')
+    data = request.json
+    nameInput = data.get('name')
+    typeSelect = data.get('type')
+    feelingInput = data.get('feeling')
+    locationInput = data.get('location')
+    descriptionInput = data.get('description')
+
+    me.create_event(1, nameInput, typeSelect, 2, 2, locationInput, descriptionInput, feelingInput)
     
-    #return f"Du hast eingegeben: {user_input}"
-    input_list = [nameInput, typeSelect, feelingInput, locationInput, descriptionInput]
-    return 
+    return {'name': nameInput, 'type': typeSelect, 'feeling': feelingInput, 'location': locationInput, 'description': descriptionInput}
 
 if __name__ == '__main__':
     app.run(debug=True)  # Debug-Modus aktivieren

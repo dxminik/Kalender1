@@ -3,14 +3,14 @@ import sqlite3
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "database.db")
 
-def create_event(user_id, event_name, event_type, event_date, event_time, event_location, event_description):
+def create_event(user_id, event_name, event_type, event_date, event_time, event_location, event_description, event_user_feeling):
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("""
         INSERT INTO events 
-        (event_user_id, event_name, event_type, event_date, event_time, event_location, event_description)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-    """, (user_id, event_name, event_type, event_date, event_time, event_location, event_description))
+        (event_user_id, event_name, event_type, event_date, event_time, event_location, event_description, event_user_feeling)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (user_id, event_name, event_type, event_date, event_time, event_location, event_description, event_user_feeling))
     conn.commit()
     conn.close()
 

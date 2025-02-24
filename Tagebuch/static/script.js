@@ -50,7 +50,7 @@ const submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(nameValue, feelingValue, typeValue, locationValue, descriptionValue)
-    const response = fetch('http://127.0.0.1:5000/submit', {
+    fetch('http://127.0.0.1:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
